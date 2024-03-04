@@ -1,11 +1,11 @@
-import numpy as np #to creating numpy array
+import numpy as np #to create numpy array
 import pandas as pd #loading data to table
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-#loading dataset to panda dataframe
-sonar_data=pd.read_csv(r"C:\Users\321de\OneDrive\Desktop\machine\sonar_data.csv",header=None)
+#loading dataset to panda data frame
+sonar_data=pd.read_csv(r"~/Desktop/sonar_data.csv",header=None)
 
 #print(sonar_data.head()) #print the first 5 line of dataset
 
@@ -50,7 +50,7 @@ input_data = (0.0307,0.0523,0.0653,0.0521,0.0611,0.0577,0.0665,0.0664,0.1460,0.2
 # changing the input_data to a numpy array
 input_data_as_numpy_array = np.asarray(input_data)
 
-# reshape the np array as we are predicting for one instance
+# Reshape the np array as we are predicting for one instance
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
 prediction = model.predict(input_data_reshaped)
